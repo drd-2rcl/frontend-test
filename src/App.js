@@ -1,28 +1,48 @@
+import { hot } from 'react-hot-loader/root'
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import styled from 'styled-components';
+
+import Paragraph from './components/paragraph';
+import Button from './components/button';
+import Table from './components/table';
+import Chart from './components/chart';
+import Input from './components/input';
+import H1 from './components/h1';
+
+const Section = styled.section`
+background-color: ${props => (props.background ? '#32C6E7' : '#fff')};
+height: 10vh;
+margin: 0;
+`;
+
+const Row = styled.div`
+justify-content: center;
+align-items: center;
+flex-direction: row;
+display: flex;
+`;
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div>
+        <Section background>
+          <Row >
+            <Input />
+            <Button />
+          </Row>
+        </Section>
+        <div>
+          <H1 />
+          <Paragraph />
+        </div>
+        <Row>
+          <Table />
+          <Chart />
+        </Row>
       </div>
     );
   }
 }
 
-export default App;
+export default hot(App);
