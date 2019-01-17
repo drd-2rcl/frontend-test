@@ -15,7 +15,7 @@ width: 40%;
 const Row = styled.div`
 justify-content: center;
 align-items: center;
-margin-top: 18px;
+margin-top: 18px 0;
 display: flex;
 
 `;

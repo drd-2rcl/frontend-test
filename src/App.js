@@ -11,7 +11,7 @@ import H1 from './components/h1';
 
 const Section = styled.section`
 background-color: ${props => (props.background ? '#32C6E7' : '#fff')};
-height: 10vh;
+height: auto;
 margin: 0;
 `;
 
